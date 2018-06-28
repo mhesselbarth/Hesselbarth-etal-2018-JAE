@@ -19,6 +19,7 @@
 # Import libraries
 library(ggplot2)
 library(spatstat)
+library(tidyverse)
 library(viridis)
 
 # Results are saved using an own written functions one can install with the 
@@ -81,10 +82,10 @@ semi_arid_mark_correlation_ggplot <- ggplot(data=dplyr::filter(mark_correlation,
   scale_color_viridis(name="", discrete = T) +
   labs(x="r [m]", y="")
 
-UtilityFunctions::Save.Function.ggplot(plot=semi_arid_mark_correlation_ggplot,
-                                       path=figures,
-                                       filename="FIG4.tiff",
-                                       dpi=500, width=90, height=75, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=semi_arid_mark_correlation_ggplot,
+#                                        path=figures,
+#                                        filename="FIG4.tiff",
+#                                        dpi=500, width=90, height=75, unit="mm")
 
 # Mesic savanna #
 mesic_mark_correlation_ggplot <- ggplot(data=dplyr::filter(mark_correlation, Savanna=="Mesic savanna")) +
@@ -102,10 +103,10 @@ mesic_mark_correlation_ggplot <- ggplot(data=dplyr::filter(mark_correlation, Sav
   scale_color_viridis(name="", discrete = T) +
   labs(x="r [m]", y="")
 
-UtilityFunctions::Save.Function.ggplot(plot=mesic_mark_correlation_ggplot, 
-                                       path=figures,
-                                       filename="FIG6.tiff",
-                                       dpi=500, width=90, height=75, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=mesic_mark_correlation_ggplot, 
+#                                        path=figures,
+#                                        filename="FIG6.tiff",
+#                                        dpi=500, width=90, height=75, unit="mm")
 
 # Appendix - Both savannas # 
 mark_correlation_ggplot_appendix <- ggplot(data=mark_correlation) +
@@ -120,8 +121,8 @@ mark_correlation_ggplot_appendix <- ggplot(data=mark_correlation) +
   scale_color_viridis(name="", discrete = T) +
   labs(x="r [m]", y=expression(paste(k[mm], "(r)")))
 
-UtilityFunctions::Save.Function.ggplot(plot=mark_correlation_ggplot_appendix, 
-                                       path=paste0(figures, "/Appendix"),
-                                       filename="FIGA3.tiff",
-                                       dpi=500, width=190, height=145, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=mark_correlation_ggplot_appendix, 
+#                                        path=paste0(figures, "/Appendix"),
+#                                        filename="FIGA3.tiff",
+#                                        dpi=500, width=190, height=145, unit="mm")
 

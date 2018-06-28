@@ -106,7 +106,7 @@ height_class_ggplot <- ggplot(data=height_class, aes(x=Height_class, y=rel, fill
   theme(axis.text.x=element_text(angle=90, vjust=0.25), legend.position="bottom")
 
 UtilityFunctions::Save.Function.ggplot(plot=height_class_ggplot,
-                                       filename="FIGA5_b.tiff",
+                                       filename="FIGA5.tiff",
                                        path=paste0(figures, "/Appendix"),
                                        dpi=500, width=140, height=90, unit="mm")
 
@@ -158,12 +158,12 @@ mesic_species_ggplot <- ggplot(data=mesic_species,
   theme_bw(base_size = 12) + 
   theme(axis.text.x=element_text(angle=90, vjust=0.25, hjust=1), legend.position="bottom")
 
-UtilityFunctions::Save.Function.ggplot(plot=semi_arid_species_ggplot,
-                                       filename="A2.tiff", 
-                                       path=paste0(figures, "/Appendix"),
-                                       dpi=500, width=190, height=240, unit="mm")
-
-UtilityFunctions::Save.Function.ggplot(plot=mesic_species_ggplot,
-                                       filename="A3.tiff", 
-                                       path=paste0(figures, "/Appendix"),
-                                       dpi=500, width=190, height=240, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=semi_arid_species_ggplot,
+#                                        filename="A2.tiff", 
+#                                        path=paste0(figures, "/Appendix"),
+#                                        dpi=500, width=190, height=240, unit="mm")
+# 
+# UtilityFunctions::Save.Function.ggplot(plot=mesic_species_ggplot,
+#                                        filename="A3.tiff", 
+#                                        path=paste0(figures, "/Appendix"),
+#                                        dpi=500, width=190, height=240, unit="mm")

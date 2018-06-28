@@ -19,6 +19,7 @@
 # Import libraries
 library(ggplot2)
 library(spatstat)
+library(tidyverse)
 library(viridis)
 
 # Results are saved using an own written functions one can install with the 
@@ -79,10 +80,10 @@ antecedent_conditions_ggplot <- ggplot(data=antecedent_conditions) +
   scale_color_viridis(name="", discrete=T) +
   labs(x="r [m]", y="")
 
-UtilityFunctions::Save.Function.ggplot(plot=antecedent_conditions_ggplot,
-                                       path=figures,
-                                       filename="FIG7.tiff",
-                                       dpi=500, width=140, height=65, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=antecedent_conditions_ggplot,
+#                                        path=figures,
+#                                        filename="FIG7.tiff",
+#                                        dpi=500, width=140, height=65, unit="mm")
 
 antecedent_conditions_ggplot_appendix <- ggplot(data=antecedent_conditions) +
   geom_ribbon(aes(x=r, ymin=lo, ymax=hi), alpha=0.3, col="grey") + 
@@ -96,7 +97,7 @@ antecedent_conditions_ggplot_appendix <- ggplot(data=antecedent_conditions) +
   scale_color_viridis(name="", discrete=T) +
   labs(x="r [m]", y=expression(g[12](r)))
 
-UtilityFunctions::Save.Function.ggplot(plot=antecedent_conditions_ggplot_appendix, 
-                                       path=paste0(figures, "/Appendix"),
-                                       filename="FIGA4.tiff",
-                                       dpi=500, width=190, height=145, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=antecedent_conditions_ggplot_appendix, 
+#                                        path=paste0(figures, "/Appendix"),
+#                                        filename="FIGA4.tiff",
+#                                        dpi=500, width=190, height=145, unit="mm")

@@ -41,7 +41,7 @@ figures <- paste0(getwd(), "/Figures")
 # Semi-arid savanna #
 # Open plot  
 semi_arid_open <- raw_data %>%
-  paste0('/Semi_arid_open_new.txt') %>%
+  paste0('/Semi_arid_open.txt') %>%
   readr::read_delim(delim=";", col_names=T) %>%
   dplyr::mutate(Species=factor(Species),
                 Plot="Open plot")
@@ -56,7 +56,7 @@ semi_arid_open_plot <- raw_data %>%
 
 # Dense plot
 semi_arid_dense <- raw_data %>%
-  paste0('/Semi_arid_dense_new.txt') %>%
+  paste0('/Semi_arid_dense.txt') %>%
   readr::read_delim(delim=";", col_names=T) %>%
   dplyr::mutate(Species=factor(Species), 
                 Plot="Dense plot")
@@ -82,7 +82,7 @@ semi_arid <- dplyr::bind_rows(semi_arid_open, semi_arid_dense) %>%
 # Mesic savanna #
 # Open plot  
 mesic_open <- raw_data %>%
-  paste0('/Mesic_open_new.txt') %>%
+  paste0('/Mesic_open.txt') %>%
   readr::read_delim(delim=";", col_names=T) %>%
   dplyr::mutate(Species=factor(Species),
                 Plot="Open plot")
@@ -98,7 +98,7 @@ mesic_open_plot <- raw_data %>%
 
 # Dense plot
 mesic_dense <- raw_data %>%
-  paste0('/Mesic_dense_new.txt') %>%
+  paste0('/Mesic_dense.txt') %>%
   readr::read_delim(delim=";", col_names=T) %>%
   dplyr::mutate(Species=factor(Species), 
                 Plot="Dense plot")
@@ -198,9 +198,9 @@ mesic_dense_ggplot <- ggplot(data=dplyr::filter(mesic, Plot=="Dense plot")) +
 plot_overall <- semi_arid_open_ggplot + mesic_open_ggplot + 
                 semi_arid_dense_ggplot + mesic_dense_ggplot
   
-UtilityFunctions::Save.Function.ggplot(plot=plot_overall, 
-                                       path=figures,
-                                       filename="FIG2.tiff",
-                                       dpi=500, width=190, height=145, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=plot_overall, 
+#                                        path=figures,
+#                                        filename="FIG2.tiff",
+#                                        dpi=500, width=190, height=145, unit="mm")
 
 

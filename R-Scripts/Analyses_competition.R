@@ -171,8 +171,8 @@ semi_arid_open_mark_correlation <- envelope(subset.ppp(semi_arid_open_ppp, selec
                                 simulate=expression(rlabel(subset.ppp(semi_arid_open_ppp, select=Height), 
                                                            labels=marks(subset.ppp(semi_arid_open_ppp, select=Height)), 
                                                            permute=T)))
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_mark_correlation,
-                  file=paste0(results, "/semi_arid_open_mark_correlation.rds"))
+# saveRDS(object=semi_arid_open_mark_correlation,
+#                   file=paste0(results, "/semi_arid_open_mark_correlation.rds"))
 
 semi_arid_dense_mark_correlation <- envelope(subset.ppp(semi_arid_dense_ppp, select=Height, drop=T), 
                                 fun=markcorr, nsim=n_sim, nrank=(p*(n_sim+1)/2), r=r_semi_arid,
@@ -180,8 +180,8 @@ semi_arid_dense_mark_correlation <- envelope(subset.ppp(semi_arid_dense_ppp, sel
                                 simulate=expression(rlabel(subset.ppp(semi_arid_dense_ppp, select=Height), 
                                                            labels=marks(subset.ppp(semi_arid_dense_ppp, select=Height)), 
                                                            permute=T)))
-UtilityFunctions::Save.Function.rds(object=semi_arid_dense_mark_correlation,
-                  file=paste0(results, "/semi_arid_dense_mark_correlation.rds"))
+# saveRDS(object=semi_arid_dense_mark_correlation,
+#                   file=paste0(results, "/semi_arid_dense_mark_correlation.rds"))
 
 # Mesic savanna #
 mesic_open_mark_correlation <- envelope(subset.ppp(mesic_open_ppp, select=Height, drop=T), 
@@ -190,8 +190,8 @@ mesic_open_mark_correlation <- envelope(subset.ppp(mesic_open_ppp, select=Height
                                 simulate=expression(rlabel(subset.ppp(mesic_open_ppp, select=Height), 
                                                            labels=marks(subset.ppp(mesic_open_ppp, select=Height)), 
                                                            permute=T)))
-UtilityFunctions::Save.Function.rds(object=mesic_open_mark_correlation,
-                  file=paste0(results, "/mesic_open_mark_correlation.rds"))
+# saveRDS(object=mesic_open_mark_correlation,
+#                   file=paste0(results, "/mesic_open_mark_correlation.rds"))
 
 mesic_dense_mark_correlation <- envelope(subset.ppp(mesic_dense_ppp, select=Height, drop=T), 
                                  fun=markcorr, nsim=n_sim, nrank=(p*(n_sim+1)/2), r=r_mesic,
@@ -199,8 +199,8 @@ mesic_dense_mark_correlation <- envelope(subset.ppp(mesic_dense_ppp, select=Heig
                                  simulate=expression(rlabel(subset.ppp(mesic_dense_ppp, select=Height), 
                                                             labels=marks(subset.ppp(mesic_dense_ppp, select=Height)), 
                                                             permute=T)))
-UtilityFunctions::Save.Function.rds(object=mesic_dense_mark_correlation,
-                  file=paste0(results, "/mesic_dense_mark_correlation.rds"))
+# saveRDS(object=mesic_dense_mark_correlation,
+#                   file=paste0(results, "/mesic_dense_mark_correlation.rds"))
 
 
 #### Nearest neighbour competition ####
@@ -227,20 +227,20 @@ nn_correlation <- function(pattern, which_mark, neighbours=4){
 
 # Semi-arid savanna # 
 semi_arid_open_nn_correlation <- nn_correlation(pattern=semi_arid_open_ppp, which_mark="Height")
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_nn_correlation,
-                  file=paste0(results, "/semi_arid_open_nn_correlation.rds"))
+# saveRDS(object=semi_arid_open_nn_correlation,
+#                   file=paste0(results, "/semi_arid_open_nn_correlation.rds"))
 
 semi_arid_dense_nn_correlation <- nn_correlation(pattern=pattern_semi_arid_dense, which_mark="Height")
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_nn_correlation,
-                  file=paste0(results, "/semi_arid_open_nn_correlation.rds"))
+# saveRDS(object=semi_arid_open_nn_correlation,
+#                   file=paste0(results, "/semi_arid_open_nn_correlation.rds"))
 
 # Mesic savanna # 
 mesic_open_nn_correlation <- nn_correlation(pattern=pattern_mesic_open, which_mark="Height")
-UtilityFunctions::Save.Function.rds(object=mesic_open_nn_correlation,
-                  file=paste0(results, "/mesic_open_nn_correlation.rds"))
+# saveRDS(object=mesic_open_nn_correlation,
+#                   file=paste0(results, "/mesic_open_nn_correlation.rds"))
 
 mesic_dense_nn_correlation <- nn_correlation(pattern=pattern_mesic_dense, which_mark="Height")
-UtilityFunctions::Save.Function.rds(object=mesic_open_nn_correlation,
-                  file=paste0(results, "/mesic_open_nn_correlation.rds"))
+# saveRDS(object=mesic_open_nn_correlation,
+#                   file=paste0(results, "/mesic_open_nn_correlation.rds"))
 
 

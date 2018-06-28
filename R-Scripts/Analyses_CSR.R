@@ -168,41 +168,39 @@ r_mesic <- seq(f=0,t=10,l=515)
 semi_arid_open_csr_small <- envelope(spatstat::subset.ppp(semi_arid_open_ppp, HeightGroup=="small", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_csr_small,
-                  file=paste0(results, "/semi_arid_open_csr_small.rds"))
 # saveRDS(object=semi_arid_open_csr_small,
-#         file=paste0(results, "/semi_arid_open_csr_small.rds"))
+#                   file=paste0(results, "/semi_arid_open_csr_small.rds"))
 
 semi_arid_open_csr_medium <- envelope(spatstat::subset.ppp(semi_arid_open_ppp, HeightGroup=="medium", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_csr_medium,
-                  file=paste0(results, "/semi_arid_open_csr_medium.rds"))
+# saveRDS(object=semi_arid_open_csr_medium,
+#                   file=paste0(results, "/semi_arid_open_csr_medium.rds"))
 
 semi_arid_open_csr_large <- envelope(spatstat::subset.ppp(semi_arid_open_ppp, HeightGroup=="large", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_csr_large,
-                  file=paste0(results, "/semi_arid_open_csr_large.rds"))
+# saveRDS(object=semi_arid_open_csr_large,
+#                   file=paste0(results, "/semi_arid_open_csr_large.rds"))
 
 # Dense plot #
 semi_arid_dense_csr_small <- envelope(spatstat::subset.ppp(semi_arid_dense_ppp, HeightGroup=="small", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=semi_arid_dense_csr_small,
-                  file=paste0(results, "/semi_arid_dense_csr_small.rds"))
+# saveRDS(object=semi_arid_dense_csr_small,
+#                   file=paste0(results, "/semi_arid_dense_csr_small.rds"))
 
 semi_arid_dense_csr_medium <- envelope(spatstat::subset.ppp(semi_arid_dense_ppp, HeightGroup=="medium", drop=T), 
                                       pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                       global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-# Save.Function.rds(object=semi_arid_dense_csr_medium, 
+# saveRDS(object=semi_arid_dense_csr_medium,
 #                   file=paste0(results, "/semi_arid_dense_csr_medium.rds"))
 
 semi_arid_dense_csr_large <- envelope(spatstat::subset.ppp(semi_arid_dense_ppp, HeightGroup=="large", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_semi_arid, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=semi_arid_dense_csr_large,
-                  file=paste0(results, "/semi_arid_dense_csr_large.rds"))
+# saveRDS(object=semi_arid_dense_csr_large,
+#                   file=paste0(results, "/semi_arid_dense_csr_large.rds"))
 
 
 # Mesic savanna #
@@ -210,36 +208,36 @@ UtilityFunctions::Save.Function.rds(object=semi_arid_dense_csr_large,
 mesic_open_csr_small <- envelope(spatstat::subset.ppp(mesic_open_ppp, HeightGroup=="small", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_open_csr_small,
-                  file=paste0(results, "/mesic_open_csr_small.rds"))
+# saveRDS(object=mesic_open_csr_small,
+#                   file=paste0(results, "/mesic_open_csr_small.rds"))
 
 mesic_open_csr_medium <- envelope(spatstat::subset.ppp(mesic_open_ppp, HeightGroup=="medium", drop=T), 
                                       pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                       global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_open_csr_medium,
-                  file=paste0(results, "/mesic_open_csr_medium.rds"))
+# saveRDS(object=mesic_open_csr_medium,
+#                   file=paste0(results, "/mesic_open_csr_medium.rds"))
 
 mesic_open_csr_large <- envelope(spatstat::subset.ppp(mesic_open_ppp, HeightGroup=="large", drop=T), 
                                      pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                      global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_open_csr_large,
-                  file=paste0(results, "/mesic_open_csr_large.rds"))
+# saveRDS(object=mesic_open_csr_large,
+#                   file=paste0(results, "/mesic_open_csr_large.rds"))
 
 # Dense plot #
 mesic_dense_csr_small <- envelope(spatstat::subset.ppp(mesic_dense_ppp, HeightGroup=="small", drop=T), 
                                       pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                       global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_dense_csr_small,
-                  file=paste0(results, "/mesic_dense_csr_small.rds"))
+# saveRDS(object=mesic_dense_csr_small,
+#                   file=paste0(results, "/mesic_dense_csr_small.rds"))
 
 mesic_dense_csr_medium <- envelope(spatstat::subset.ppp(mesic_dense_ppp, HeightGroup=="medium", drop=T), 
                                        pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                        global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_dense_csr_medium,
-                  file=paste0(results, "/mesic_dense_csr_medium.rds"))
+# saveRDS(object=mesic_dense_csr_medium,
+#                   file=paste0(results, "/mesic_dense_csr_medium.rds"))
 
 mesic_dense_csr_large <- envelope(spatstat::subset.ppp(mesic_dense_ppp, HeightGroup=="large", drop=T), 
                                       pcf, stoyan=styn, nsim=n_sim, divisor=dvsr, nrank=(p*(n_sim+1)/2),
                                       global=F, correction=crrctn, r=r_mesic, savefuns=T)
-UtilityFunctions::Save.Function.rds(object=mesic_dense_csr_large,
-                  file=paste0(results, "/mesic_dense_csr_large.rds"))
+# saveRDS(object=mesic_dense_csr_large,
+#                   file=paste0(results, "/mesic_dense_csr_large.rds"))

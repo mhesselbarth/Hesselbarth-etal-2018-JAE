@@ -19,6 +19,7 @@
 # Import libraries
 library(ggplot2)
 library(spatstat)
+library(tidyverse)
 library(viridis)
 
 # Results are saved using an own written functions one can install with the 
@@ -41,46 +42,46 @@ figures <- paste0(getwd(), "/Figures")
 # Open plot #
 
 # Import data 
-semi_arid_open_small_csr <- readRDS(paste0(results, "/semi_arid_open_small_csr.rds"))
+semi_arid_open_csr_small <- readRDS(paste0(results, "/semi_arid_open_csr_small.rds"))
 # Diggle-Cressie-Loosmore-Ford and Maximum Absolute Deviation Tests
-spatstat::dclf.test(semi_arid_open_small_csr)
+spatstat::dclf.test(semi_arid_open_csr_small)
 
-semi_arid_open_medium_csr <- readRDS(paste0(results, "/semi_arid_open_medium_csr.rds"))
-spatstat::dclf.test(semi_arid_open_medium_csr)
+semi_arid_open_csr_medium <- readRDS(paste0(results, "/semi_arid_open_csr_medium.rds"))
+spatstat::dclf.test(semi_arid_open_csr_medium)
 
-semi_arid_open_large_csr <- readRDS(paste0(results, "/semi_arid_open_large_csr.rds"))
-spatstat::dclf.test(semi_arid_open_large_csr)
+semi_arid_open_csr_large <- readRDS(paste0(results, "/semi_arid_open_csr_large.rds"))
+spatstat::dclf.test(semi_arid_open_csr_large)
 
 # Dense plot #
-semi_arid_dense_small_csr <- readRDS(paste0(results, "/semi_arid_dense_small_csr.rds"))
-spatstat::dclf.test(semi_arid_dense_small_csr)
+semi_arid_dense_csr_small <- readRDS(paste0(results, "/semi_arid_dense_csr_small.rds"))
+spatstat::dclf.test(semi_arid_dense_csr_small)
 
-semi_arid_dense_medium_csr <- readRDS(paste0(results, "/semi_arid_dense_medium_csr.rds"))
-spatstat::dclf.test(semi_arid_dense_medium_csr)
+semi_arid_dense_csr_medium <- readRDS(paste0(results, "/semi_arid_dense_csr_medium.rds"))
+spatstat::dclf.test(semi_arid_dense_csr_medium)
 
-semi_arid_dense_large_csr <- readRDS(paste0(results, "/semi_arid_dense_large_csr.rds"))
-spatstat::dclf.test(semi_arid_dense_large_csr)
+semi_arid_dense_csr_large <- readRDS(paste0(results, "/semi_arid_dense_csr_large.rds"))
+spatstat::dclf.test(semi_arid_dense_csr_large)
 
 # Mesic savanna #
 # Open plot
-mesic_open_small_csr <- readRDS(paste0(results, "/mesic_open_small_csr.rds"))
-spatstat::dclf.test(mesic_open_small_csr)
+mesic_open_csr_small <- readRDS(paste0(results, "/mesic_open_csr_small.rds"))
+spatstat::dclf.test(mesic_open_csr_small)
 
-mesic_open_medium_csr <- readRDS(paste0(results, "/mesic_open_medium_csr.rds"))
-spatstat::dclf.test(mesic_open_medium_csr)
+mesic_open_csr_medium <- readRDS(paste0(results, "/mesic_open_csr_medium.rds"))
+spatstat::dclf.test(mesic_open_csr_medium)
 
-mesic_open_large_csr <- readRDS(paste0(results, "/mesic_open_large_csr.rds"))
-spatstat::dclf.test(mesic_open_large_csr)
+mesic_open_csr_large <- readRDS(paste0(results, "/mesic_open_csr_large.rds"))
+spatstat::dclf.test(mesic_open_csr_large)
 
 # Dense plot #
-mesic_dense_small_csr <- readRDS(paste0(results, "/mesic_dense_small_csr.rds"))
-spatstat::dclf.test(mesic_dense_small_csr)
+mesic_dense_csr_small <- readRDS(paste0(results, "/mesic_dense_csr_small.rds"))
+spatstat::dclf.test(mesic_dense_csr_small)
 
-mesic_dense_medium_csr <- readRDS(paste0(results, "/mesic_dense_medium_csr.rds"))
-spatstat::dclf.test(mesic_dense_medium_csr)
+mesic_dense_csr_medium <- readRDS(paste0(results, "/mesic_dense_csr_medium.rds"))
+spatstat::dclf.test(mesic_dense_csr_medium)
 
-mesic_dense_large_csr <- readRDS(paste0(results, "/mesic_dense_large_csr.rds"))
-spatstat::dclf.test(mesic_dense_large_csr)
+mesic_dense_csr_large <- readRDS(paste0(results, "/mesic_dense_csr_large.rds"))
+spatstat::dclf.test(mesic_dense_csr_large)
 
 
 #### Combine dataframes ####
@@ -133,10 +134,10 @@ semi_arid_csr_ggplot <- ggplot(semi_arid_csr) +
   scale_color_viridis(name="", discrete = T) +
   labs(x="r [m]", y="")
 
-UtilityFunctions::Save.Function.ggplot(plot=semi_arid_csr_ggplot, 
-                                       path=figures,
-                                       filename="FIG3.tiff",
-                                       dpi=500, width=140, height=75, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=semi_arid_csr_ggplot, 
+#                                        path=figures,
+#                                        filename="FIG3.tiff",
+#                                        dpi=500, width=140, height=75, unit="mm")
 
 semi_arid_csr_ggplot_appendix <- ggplot(semi_arid_csr) + 
   geom_ribbon(aes(x=r, ymin=lo, ymax=hi), alpha=0.3, col="grey") + 
@@ -150,10 +151,10 @@ semi_arid_csr_ggplot_appendix <- ggplot(semi_arid_csr) +
   scale_color_viridis(name="", discrete = T) +
   labs(x="r [m]", y="g(r)")
 
-UtilityFunctions::Save.Function.ggplot(plot=semi_arid_csr_ggplot_appendix, 
-                                       path=paste0(figures, "/Appendix"),
-                                       filename="FIGA1.tiff",
-                                       dpi=500, width=190, height=240, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=semi_arid_csr_ggplot_appendix, 
+#                                        path=paste0(figures, "/Appendix"),
+#                                        filename="FIGA1.tiff",
+#                                        dpi=500, width=190, height=240, unit="mm")
 
 # Mesic savanna # 
 mesic_csr_ggplot <- ggplot(mesic_csr) + 
@@ -171,10 +172,10 @@ mesic_csr_ggplot <- ggplot(mesic_csr) +
   scale_color_viridis(name="", discrete=T) +
   labs(x="r [m]", y="")
 
-UtilityFunctions::Save.Function.ggplot(plot=mesic_csr_ggplot, 
-                                       path=figures,
-                                       filename="FIG5.tiff",
-                                       dpi=500, width=140, height=75, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=mesic_csr_ggplot, 
+#                                        path=figures,
+#                                        filename="FIG5.tiff",
+#                                        dpi=500, width=140, height=75, unit="mm")
 
 mesic_csr_ggplot_appendix <- ggplot(mesic_csr) + 
   geom_ribbon(aes(x=r, ymin=lo, ymax=hi), alpha=0.3, col="grey") + 
@@ -188,8 +189,8 @@ mesic_csr_ggplot_appendix <- ggplot(mesic_csr) +
   scale_color_viridis(name="", discrete=T) +
   labs(x="r [m]", y="g(r)")
 
-UtilityFunctions::Save.Function.ggplot(plot=mesic_csr_ggplot_appendix,
-                                       path=paste0(figures, "/Appendix"),
-                                       filename="FIGA2.tiff",
-                                       dpi=500, width=190, height=240, unit="mm")
+# UtilityFunctions::Save.Function.ggplot(plot=mesic_csr_ggplot_appendix,
+#                                        path=paste0(figures, "/Appendix"),
+#                                        filename="FIGA2.tiff",
+#                                        dpi=500, width=190, height=240, unit="mm")
 

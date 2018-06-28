@@ -17,8 +17,8 @@
 ##--------------------------------------------------------##
 
 #### Import libraries and set working directory #### 
-library(tidyverse)
 library(maptools)
+library(tidyverse)
 library(spatstat)
 
 # Results are saved using an own written functions one can install with the 
@@ -187,21 +187,21 @@ r_mesic <- seq(f=0,t=10,l=515)
 # Semi-arid savanna #
 semi_arid_open_antecedent_conditions <- antecedent_conditions(pattern=semi_arid_open_ppp, which_mark="HeightGroup",
                                             p=p, n_sim=n_sim, r=r_semi_arid)
-UtilityFunctions::Save.Function.rds(object=semi_arid_open_antecedent_conditions, 
-                  file=paste0(results, "/semi_arid_open_antecedent_conditions.rds"))
+# saveRDS(object=semi_arid_open_antecedent_conditions, 
+#                   file=paste0(results, "/semi_arid_open_antecedent_conditions.rds"))
 
 semi_arid_dense_antecedent_conditions <- antecedent_conditions(pattern=semi_arid_dense_ppp, which_mark="HeightGroup",
                                             p=p, n_sim=n_sim, r=r_semi_arid)
-UtilityFunctions::Save.Function.rds(object=semi_arid_dense_antecedent_conditions, 
-                  file=paste0(results, "/semi_arid_dense_antecedent_conditions.rds"))
+# saveRDS(object=semi_arid_dense_antecedent_conditions, 
+#                   file=paste0(results, "/semi_arid_dense_antecedent_conditions.rds"))
 
 # Mesic savanna # 
 mesic_open_antecedent_conditions <- antecedent_conditions(pattern=mesic_open_ppp, which_mark="HeightGroup",
                                             p=p, n_sim=n_sim, r=r_mesic)
-UtilityFunctions::Save.Function.rds(object=mesic_open_antecedent_conditions, 
-                  file=paste0(results, "/mesic_open_antecedent_conditions.rds"))
+# saveRDS(object=mesic_open_antecedent_conditions, 
+#                   file=paste0(results, "/mesic_open_antecedent_conditions.rds"))
 
 mesic_dense_antecedent_conditions <- antecedent_conditions(pattern=mesic_dense_ppp, which_mark="HeightGroup",
                                              p=p, n_sim=n_sim, r=r_mesic)
-UtilityFunctions::Save.Function.rds(object=mesic_dense_antecedent_conditions, 
-                  file=paste0(results, "/mesic_dense_antecedent_conditions.rds"))
+# saveRDS(object=mesic_dense_antecedent_conditions, 
+#                   file=paste0(results, "/mesic_dense_antecedent_conditions.rds"))
