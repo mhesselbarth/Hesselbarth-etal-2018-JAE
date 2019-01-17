@@ -3,13 +3,14 @@
 ##    Hesselbarth et al. (2018):  Density-dependent spatial patterning of     ## 
 ##                                woody plants differs  between a semi-arid   ## 
 ##                                and a mesic savanna in South Africa.        ## 
-##    Journal of Arid Environments. X, xxx-xxx                                ##
+##    Journal of Arid Environments (157), 103–112.                            ##
 ##                                                                            ##
 ##                                                                            ##
 ##    Maximilian Hesselbarth (Author R-Script)                                ##
 ##    Department of Ecosystem Modelling                                       ##
 ##    University of Goettingen                                                ##
 ##    maximilian.hesselbarth@uni-goettingen.de                                ##
+##    https://mhesselbarth.rbind.io/                                          ##
 ##                                                                            ##
 ################################################################################
 
